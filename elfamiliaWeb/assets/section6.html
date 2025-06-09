@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Essential JS 2 Calendar control</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Typescript UI Controls">
+    <meta name="author" content="Syncfusion">
+    <!--style reference from the Calendar component-->
+    <link href="https://cdn.syncfusion.com/ej2/29.2.4/ej2-base/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/29.2.4/ej2-buttons/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/29.2.4/ej2-calendars/styles/material.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!--style reference from app-->
+    <link href="section6.css" rel="stylesheet">
+    
+    
+<script src="https://cdn.syncfusion.com/ej2/29.2.4/dist/ej2.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js" type ="text/javascript"></script>
+</head>
+
+<body>
+    
+    <form>
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="Email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="name-input" placeholder="Enter your Name">
+        </div>
+        <div class="mb-3">
+            <input type="number" class="form-control" id="phone-input" placeholder="Phone number">
+        </div>
+        <div class="input-group mb-3">
+            <input list="numbers" class="form-control" id="quantity" name="quantity" placeholder="Number of Occupants">
+            <datalist id="numbers"></datalist>
+            <!-- <label for="number-label" class="form-label">Number of Occupants</label>
+            <input type="number" class="form-control w-25 mx-25" size="1" aria-label="Text input with dropdown button">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select</button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">1</a></li>
+                <li><a class="dropdown-item" href="#">2</a></li>
+                <li><a class="dropdown-item" href="#">3</a></li>
+                <li><a class="dropdown-item" href="#">4</a></li>
+            </ul> -->
+        </div>
+
+        
+        
+        <button type="submit" class="btn btn-primary">Book Now!</button>
+    </form>
+    <div id="container">
+        <!--element which is going to render the Calendar-->
+        <div id="element"></div>
+    </div>
+
+    
+
+
+<script>
+
+var ele = document.getElementById('container');
+if(ele) {
+  ele.style.visibility = "visible";
+}   
+const datalist = document.getElementById('numbers');
+  for (let i = 1; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.value = i;
+    datalist.appendChild(option);
+  }
+
+      </script>
+<script src="calendar.js" type="text/javascript"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+
+</body></html>
